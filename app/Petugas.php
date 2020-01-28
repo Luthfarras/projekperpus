@@ -22,6 +22,10 @@ class Petugas extends Authenticatable implements JWTSubject
         'nama_petugas', 'alamat', 'telp', 'username', 'password', 'level'
     ];
 
+    public function pinjam(){
+      return $this->hasMany('App\Pinjam','id');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
