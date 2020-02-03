@@ -41,7 +41,13 @@ Route::delete('/hapus_anggota/{id}','AnggotaController@destroy')->middleware('jw
 
 // peminjaman
 Route::get('/peminjaman','PinjamController@index')->middleware('jwt.verify');
-Route::post('/simpan_pinjam','PinjamController@store')->middleware('jwt.verify');
+Route::post('/tambah_pinjam','PinjamController@store')->middleware('jwt.verify');
 Route::put('/ubah_pinjam/{id}','PinjamController@update')->middleware('jwt.verify');
 Route::get('/tampil_pinjam','PinjamController@tampil')->middleware('jwt.verify');
 Route::delete('/hapus_pinjam/{id}','PinjamController@destroy')->middleware('jwt.verify');
+
+// detail_peminjaman
+Route::post('/simpan_detail','PinjamController@simpan')->middleware('jwt.verify');
+Route::put('/ubah_detail/{id}','PinjamController@ubah')->middleware('jwt.verify');
+Route::delete('/hapus_detail/{id}','PinjamController@hapus')->middleware('jwt.verify');
+// Route::get('/tampil_detail','PinjamController@tampil_detail')->middleware('jwt.verify');

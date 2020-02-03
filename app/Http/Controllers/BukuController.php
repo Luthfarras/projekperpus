@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Buku;
-use Illuminate\Support\Facades\Validator;use JWTAuth;
+use Illuminate\Support\Facades\Validator;
+use JWTAuth;
 use Auth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
